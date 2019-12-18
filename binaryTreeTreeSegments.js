@@ -27,11 +27,11 @@
 "use strict";
 class Node {
 
-	constructor(value, end) {
+	constructor(value, start, end) {
 		this.left = null;
 		this.right = null;
 		this.value = value;
-		this.startSegment = 0;
+		this.startSegment = start;
 		this.endSegment = end;
 	}
 
@@ -66,7 +66,7 @@ class Node {
 		this.startSegment = n;
 	}
  
-    getEndSegment() {
+	getEndSegment() {
 		return this.endSegment;
 	}
 	setEndSegment(n) {
