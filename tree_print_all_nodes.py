@@ -90,7 +90,7 @@ def main():
     nodes[1].set_right(None)
     traverse(nodes[1])
 
-    # test None case
+    # test Null case
     print("\ntest case - null ")
     traverse(None)
 
