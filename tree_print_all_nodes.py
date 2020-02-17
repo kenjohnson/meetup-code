@@ -1,6 +1,6 @@
 "Traverse tree"
 
-# Print all the leaves of this binary tree
+# Print all the nodes of this binary tree
 # This is my core code used to traverse through a binary tree
 # To run on windows, bring up command prompt and do
 # >python tree_print_leaves.py
