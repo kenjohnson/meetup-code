@@ -1,22 +1,22 @@
 "Traverse binary tree, play around with levels"
 
-# This is my core code used to show how to use parameters in the 
-# traverse function. In this case, I use level . 
+# This is my core code used to show how to use parameters in the
+# traverse function. In this case, I use level .
 # This code shows examples of playing around with levels.
-# For example, print all the values between two levels, 
+# For example, print all the values between two levels,
 # print values on even levels, print values on a certain
-# level where the node has some specific value. 
+# level where the node has some specific value.
 # I can't run all examples at once, so I leave all but
 # one example commented out.  Just uncomment the one
-# you want to look at.  Make up your own example too. 
+# you want to look at.  Make up your own example too.
 # To run on windows, bring up command prompt and do
 # >python tree_print_level.py
 class Node():
     '''This class defines a node on the tree'''
 
     def __init__(self, left, right, value):
-        self.__left = None
-        self.__right = None
+        self.__left = left
+        self.__right = right
         self.__value = value
 
     def get_left(self):
@@ -44,7 +44,7 @@ class Node():
         self.__value = value
 
 
-def traverse(node,level):
+def traverse(node, level):
     '''
     This function gets called recursively. It
     visits each node, plays around with levels. Then it checks to see if
@@ -54,7 +54,10 @@ def traverse(node,level):
     Finally it return to the root node, and then returns to
     the calling program.
     '''
-    
+
+    if not node:
+        return
+
     #print values between these two levels
     '''if level > 0 and level < 3:
         print("value is ", node.get_value(), " level is ", level)'''
@@ -75,32 +78,33 @@ def traverse(node,level):
 
 def main():
     ''' Creates the tree and runs the test cases'''
-    
+
     # create tree for testing
-    
-    ARR = []
-    
+
+    nodes = []
+
     for i in range(0, 10):
-        ARR.append(Node(None, None, i))
-    
+        nodes.append(Node(None, None, i))
+
     # add the legs
-    ARR[6].set_left(ARR[8])
-    ARR[6].set_right(ARR[9])
-    ARR[3].set_left(ARR[6])
-    ARR[4].set_left(ARR[7])
-    ARR[2].set_left(ARR[4])
-    ARR[2].set_right(ARR[5])
-    ARR[1].set_left(ARR[2])
-    ARR[1].set_right(ARR[3])
-    
+    nodes[6].set_left(nodes[8])
+    nodes[6].set_right(nodes[9])
+    nodes[3].set_left(nodes[6])
+    nodes[4].set_left(nodes[7])
+    nodes[2].set_left(nodes[4])
+    nodes[2].set_right(nodes[5])
+    nodes[1].set_left(nodes[2])
+    nodes[1].set_right(nodes[3])
+
     # run the test
-    traverse(ARR[1], 0)
-    
+    traverse(nodes[1], 0)
+
     # test None case
     print()
-    ARR[1].set_left(None)
-    ARR[1].set_right(None)
-    traverse(ARR[1],0)
+    nodes[1].set_left(None)
+    nodes[1].set_right(None)
+    traverse(nodes[1], 0)
 
 if __name__ == '__main__':
-   main()
+    main()
+   
