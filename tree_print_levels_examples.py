@@ -10,7 +10,7 @@
 # one example commented out.  Just uncomment the one
 # you want to look at.  Make up your own example too.
 # To run on windows, bring up command prompt and do
-# >python tree_print_level.py
+# >python tree_print_levels_examples.py
 class Node():
     '''This class defines a node on the tree'''
 
