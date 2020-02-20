@@ -3,7 +3,7 @@
 # Print all the nodes of this binary tree
 # This is my core code used to traverse through a binary tree
 # To run on windows, bring up command prompt and do
-# >python tree_print_leaves.py
+# >python tree_print_all_nodes.py
 class Node():
     '''This class defines a node on the tree'''
 
