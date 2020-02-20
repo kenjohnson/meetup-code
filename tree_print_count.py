@@ -2,7 +2,7 @@
 
 # Print the sum of the nodes on this binary tree.
 # To run on windows, bring up command prompt and do
-# >python tree_print_leaves.py
+# >python tree_print_count.py
 class Node():
     '''This class defines a node on the tree'''
 
