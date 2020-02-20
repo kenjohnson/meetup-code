@@ -4,7 +4,7 @@
 # You can also, modify it to count the values at a
 # certain level.
 # To run on windows, bring up command prompt and do
-# >python tree_print_level.py
+# >python tree_print_level_and_count.py
 class Node():
     '''This class defines a node on the tree'''
 
